@@ -74,7 +74,7 @@ main {
   min-height: calc(100vh - 8rem);
   width: 100%;
   place-items: center;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 20px ;
   padding: 20px;
 }
@@ -93,12 +93,19 @@ main {
 .color-name{
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 20%;
   font-size: 28px;
+  padding: 10px 0;
 }
 .button{
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 720px)
+{
+  .grid-container{
+    grid-template-columns: auto auto;
+  }
 }
