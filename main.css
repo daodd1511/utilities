@@ -1,0 +1,10 @@
+@import "style.css";
+div {
+  padding: 40px;
+  text-align: center;
+  font-size: 48px;
+}
+div a{
+  text-decoration: none;
+  color: black;
+}
