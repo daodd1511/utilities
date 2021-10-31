@@ -4,9 +4,22 @@ const btn = document.querySelector('.btn');
 btn.addEventListener('click',()=>{
   const min = parseInt(document.getElementById('min').value);
   const max = document.getElementById('max').value;
+  const quantity = document.getElementById('quantity').value;
+  const option = document.getElementById('sort').value;
   const result = document.querySelector('.result');
-  result.innerHTML=getRandomNumber(min, max);
-  console.log(Math.random()* (max - min));
+  let temp = [];
+  result.innerHTML = "";
+  for(let i = 0; i < quantity; i++){
+    temp.push(getRandomNumber(min, max));
+  }
+  if(option == 'asc'){
+    temp.sort(function(a, b){return a - b});
+  } else if(option == 'desc'){
+    temp.sort(function(a, b){return b - a});
+  }
+  for(let i = 0; i < quantity; i++){
+    result.innerHTML += temp[i] + " ";
+  }
 })
 
 
