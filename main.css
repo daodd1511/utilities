@@ -25,12 +25,12 @@ main {
   min-height: calc(100vh - 4rem);
   place-items: center;
 }
-.color-flipper, .random-number {
+.color-flipper, .random-number, .clock {
   padding: 40px;
   text-align: center;
   font-size: 48px;
 }
-.color-flipper a,.random-number a{
+.color-flipper a,.random-number a, .clock a{
   text-decoration: none;
   color: black;
 }

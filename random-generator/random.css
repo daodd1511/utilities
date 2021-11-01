@@ -50,3 +50,19 @@ fieldset {
 .option span {
   padding-left: 20px;
 }
+
+@media screen and (max-width: 720px)
+{
+  .container{
+    flex-direction: column;
+  }
+  fieldset{
+    width: 90%;
+  }
+  .option, .range{
+    padding: 20px;
+  }
+  .result{
+    font-size: 24px;
+  }
+}

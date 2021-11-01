@@ -1,0 +1,118 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Varela Round, Sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, pink, lightblue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.back{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    text-decoration: none;
+    color: black;
+}
+.clock{
+    height:300px;
+    width: 300px;
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+}
+
+.clock::after{
+    content:"";
+    position: absolute;
+    background-color: black;
+    z-index: 6;
+    height: 15px;
+    width: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.clock .number {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1{
+    --rotation : 30deg;
+}
+.clock .number2{
+    --rotation : 60deg;
+}
+.clock .number3{
+    --rotation : 90deg;
+}
+.clock .number4{
+    --rotation : 120deg;
+}
+.clock .number5{
+    --rotation : 150deg;
+}
+.clock .number6{
+    --rotation : 180deg;
+}
+.clock .number7{
+    --rotation : 210deg;
+}
+.clock .number8{
+    --rotation : 240deg;
+}
+.clock .number9{
+    --rotation : 270deg;
+}
+.clock .number10{
+    --rotation : 300deg;
+}
+.clock .number11{
+    --rotation : 330deg;
+}
+
+.hand{
+    --rotation: 0;
+    position : absolute;
+    height:50%;
+    width: 5px; 
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    z-index: 5;
+}
+
+.hour{
+    width: 10px;
+    height: 30%;
+    background-color: black;
+}
+
+.minute{
+    height:40%;
+    width: 7px;
+    background-color: black;
+}
+.second{
+    background-color: red;
+    height: 45%;
+    width: 3px;
+}
+
+
